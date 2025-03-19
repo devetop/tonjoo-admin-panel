@@ -1,0 +1,98 @@
+.fellowship-head {
+    padding: 80px 0;
+    text-align: center;
+    @media (max-width: #{$small--screen}px) {
+        padding: 40px 0;
+    }
+    .suptitle {
+        font-size: 20px;
+        line-height: calc(24/20);
+        letter-spacing: 0.04;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        color: $color-primary-05;
+        font-weight: 500;
+        @media (max-width: #{$medium--screen--up}px) {
+            font-size: 18px;
+        }
+        @media (max-width: #{$small--screen}px) {
+            font-size: 16px;
+        }
+    }
+    .title {
+        font-size: 56px;
+        line-height: calc(87/72);
+        font-weight: 900;
+        margin-bottom: 30px;
+        margin-top: 0;
+        color: $color-text;
+        @media (max-width: #{$medium--screen--up}px) {
+            font-size: 44px;
+        }
+        @media (max-width: #{$small--screen}px) {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+    }
+    .tab-menu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: calc(24/20);
+        @media (max-width: 768px) {
+            display: block;
+            font-size: 12px;
+        }
+        > li {
+            background-color: #f6f8f8;
+            color: $color-text;
+            > a {
+                margin-right: 30px;
+                display: block;
+                color: inherit;
+                border-radius: 100px;
+                text-decoration: none;
+                padding-bottom: 1px;
+                transition: all 0.2s ease-in-out;
+                padding: 12px 30px;
+                @media (max-width: 768px) {
+                    padding: 10px 22px;
+                    margin-right: 0;
+                    border-radius: 10px;
+                }
+                &:hover {
+                    background-color: darken(#f6f8f8, 5%);
+                }
+            }
+            &.active {
+                color: #fff;
+                @media (max-width: #{$medium--screen}px) {
+                    background-color: #f6f8f8;
+                }
+                > a {
+                    background-color: $color-secondary-01;
+                }
+            }
+            &:first-child {
+                border-radius: 100px 0 0 100px;
+                @media (max-width: #{$medium--screen}px) {
+                    border-radius: 10px 10px 0 0;
+                }
+            }
+            &:last-child {
+                border-radius: 0 100px 100px 0;
+                @media (max-width: #{$medium--screen}px) {
+                    border-radius: 0 0 10px 10px;
+                }
+                > a {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}

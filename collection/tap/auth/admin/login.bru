@@ -1,0 +1,31 @@
+meta {
+  name: login
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base_url}}/api/admin/login
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "email": "{{_email}}",
+    "password": "{{_password}}"
+  }
+}
+
+vars:pre-request {
+  _email: fed-admin@mail.com
+  _password: 12341234
+}
+
+assert {
+  ~res.body?.data?.user?.email: eq admin@mail.com
+}
+
+script:post-response {
+  bru.setVar('email', res.body?.data?.user?.email);
+}

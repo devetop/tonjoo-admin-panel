@@ -1,0 +1,197 @@
+.multiple-file-box {
+    .list-wrapper {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+  
+    .multi-file-label {
+        > input {
+            display: none;
+        }
+  
+        position: relative;
+        width: 144px;
+        height: 118px;
+        text-align: center;
+        background-color: #63a8eb;
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.7);
+        border-radius: 4px;
+        margin: 0;
+        padding: 30px 0;
+        cursor: pointer;
+        -webkit-transition: all 0.2s linear;
+        -o-transition: all 0.2s linear;
+        transition: all 0.2s linear;
+  
+        &:hover {
+            background-color: #2286e6;
+            color: #ffffff;
+        }
+    
+        > {
+            .fa, [class*=ph] {
+                font-size: 34px;
+                margin-bottom: 12px;
+            }
+        }
+    }
+  
+    .list-box {
+        margin-right: 15px;
+        margin-bottom: 15px;
+        height: auto;
+        position: relative;
+  
+        .deleted-box {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            width: 100%;
+            height: 118px;
+            padding: 43px 0;
+            border-radius: 4px;
+            text-align: center;
+            -webkit-transform: scale(0);
+            -ms-transform: scale(0);
+            -o-transform: scale(0);
+            transform: scale(0);
+            -webkit-transition: all 0.3s linear;
+            -o-transition: all 0.3s linear;
+            transition: all 0.3s linear;
+        }
+    }
+  
+    .image-preview:hover + .deleted-box, .deleted-box:hover {
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1);
+    }
+  
+    .list-box .delete-image {
+        display: inline-block;
+    }
+  
+    .image-preview {
+        height: 118px;
+        position: relative;
+        border: 1px solid #ddd;
+    }
+  
+    .list-box img {
+        height: 100%;
+        width: 144px;
+        display: block;
+        object-fit: contain;
+        object-position: center;
+    }
+}
+  
+.multi-upload-wrap {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0 -5px;
+
+    > * {
+        padding: 0 5px;
+    }
+}
+  
+.single-file-label {
+    position: relative;
+    width: 115px;
+    height: 115px;
+    text-align: center;
+    border: 1px dashed #2286e6;
+    font-size: 11px;
+    color: #2286e6;
+    border-radius: 4px;
+    margin: 0;
+    padding: 30px 0;
+    opacity: 0.8;
+    cursor: pointer;
+    -webkit-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+
+    > {
+        input {
+            opacity: 0;
+            position: absolute;
+            left: 0;
+            top: 0;
+            padding: 0;
+            width: 0;
+            height: 0;
+        }
+    
+        .fa, [class*=ph] {
+            font-size: 24px;
+            margin-bottom: 7px;
+        }
+    }
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.single-list-box {
+    position: relative;
+    display: block;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+
+    .deleted-box {
+        display: none;
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        text-align: center;
+        right: -2px;
+        top: -6px;
+        font-size: 10px;
+        color: #fff;
+        background-color: #B9B9B9;
+        border-radius: 999px;
+        cursor: pointer;
+        -webkit-transform: scale(0.7);
+        -ms-transform: scale(0.7);
+        -o-transform: scale(0.7);
+        transform: scale(0.7);
+    }
+
+    .image-preview {
+        height: 115px;
+        width: 115px;
+        position: relative;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+
+        img {
+            height: 100%;
+            width: 100%;
+            display: block;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    .single-file-info {
+        text-align: center;
+        margin-top: 5px;
+        color: #999;
+    }
+
+    &.has-error .single-file-label {
+        border-color: #AF1200;
+    }
+}
+  

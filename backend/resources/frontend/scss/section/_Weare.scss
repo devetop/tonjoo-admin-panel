@@ -1,0 +1,172 @@
+#weare.weare{
+    .item-wrapper{
+        .item{
+            position: relative;
+            padding: 80px 0;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            &.left{
+                .content__wrapper{
+                    // justify-content: start;
+                    // align-items: flex-end;
+                    // background-color: red;
+                    .content{
+                        margin: 0 auto 0 0;
+                    }
+                }
+            }
+            &::before{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -2;
+                width: 100%;
+                height: 100%;
+                background-color: #F9FAFB;
+            }
+            .content__wrapper{
+                display: flex;
+                // justify-content: end;
+                // align-items: flex-end;
+                // background-color: purple;
+                .content{
+                    margin: 0 0 0 auto;
+                    flex: 0 0 calc(50% + 80px);
+                    background-color: #FFFFFF;
+                    padding: 60px;
+                    box-shadow: 0px 4px 40px rgba(51, 51, 51, 0.05);
+                    border-radius: 20px;
+                    background-image: url("../images/background/circle-04.png");
+                    background-position: right bottom;
+                    background-repeat: no-repeat;
+                    &__header, &__header *{
+                        font-weight: bold;
+                        font-size: 34px;
+                        line-height: 44px;
+                        letter-spacing: 0.25px;
+                        color: #344054;
+                        margin-bottom: 12px;
+                    }
+                    &__desc, &__desc *{
+                        font-size: 16px;
+                        line-height: 28px;
+                        letter-spacing: 0.5px;
+                        color: #667085;
+                        margin-bottom: 40px;
+                    }
+                    &__readmore{
+                        display: inline;
+                        a{
+                            transition: all 0.5s;
+                            padding: 12px 40px;
+                            border-radius: 100px;
+                            border: 1px solid $color-primary-03 ;
+                            text-decoration: none;
+                            text-transform: uppercase;
+                            color: $color-primary-03 ;
+                            font-weight: bold;
+                            font-size: 14px;
+                            line-height: 24px;
+                            letter-spacing: 1.25px;
+                            &:hover{
+                                transition: all 0.5s;
+                                background-color: $color-primary-03;
+                                color: #fff;
+                            }
+                        }
+                    }
+                    &__list{
+                        .list{
+                            display: flex;
+                            align-items: flex-start;
+                            justify-content: start;
+                            gap: 20px;
+                            margin-bottom: 20px ;
+                            &-icon{
+                                flex: 0 0 50px;
+                                height: 50px;
+                                img{
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }
+                            &-heading{
+                                flex: 0 0 382px;
+                                .title, .title *{
+                                    font-weight: bold;
+                                    font-size: 24px;
+                                    line-height: 28px;
+                                    color: #344054;
+                                    margin-bottom: 8px;
+                                }
+                                .desc, .desc *{
+                                    font-size: 16px;
+                                    line-height: 24px;
+                                    letter-spacing: 0.5px;
+                                    color: #667085;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media #{$large-and-down}{
+        .item-wrapper{
+            .item{
+                .content__wrapper{
+                    .content{
+                        flex: 0 0 calc(100%);
+                    }
+                }
+            }
+        }
+    }
+
+    @media #{$medium-and-down}{
+        .item-wrapper{
+            .item{
+                padding: 250px 0 40px;
+                .inner{
+                    height: 309px;
+                }
+                .content__wrapper{
+                    .content{
+                        padding: 30px;
+                        flex: 0 0 calc(100%);
+                        &__header, &__header *{
+                            font-size: 24px;
+                            line-height: 28px;
+                        }
+                        &__desc, &__desc *{
+                            font-size: 14px;
+                            letter-spacing: 0.25px;
+                            margin-bottom: 20px;
+                        }
+                        &__readmore{
+                            display: block;
+                            a{
+                                width: 100%;
+                                display: block;
+                                text-align: center;
+                            }
+                        }
+                        &__list{
+                            .list-heading{
+                                flex: 1 1 auto;
+                                .title, .title *{
+                                    font-size: 20px;
+                                    line-height: 23px;
+                                    letter-spacing: 0.15px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,12 @@
+.line-height{
+    line-height: 1 !important;
+    &-sm{
+        line-height: 1.5 !important;
+    }
+    &-md{
+        line-height: 1.8 !important;
+    }
+    &-lg{
+        line-height: 2 !important;
+    }
+}

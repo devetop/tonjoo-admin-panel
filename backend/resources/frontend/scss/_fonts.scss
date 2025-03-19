@@ -1,0 +1,65 @@
+//BMWTypeNext
+
+@font-face {
+    font-family: 'BMWTypeNext';
+    src: local('BMWTypeNext Bold'), local('BMWTypeNext-Bold'),
+        url('../fonts/BMWTypeNext-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'BMWTypeNext';
+    src: local('BMWTypeNext Regular'), local('BMWTypeNext-Regular'),
+        url('../fonts/BMWTypeNext-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'BMWTypeNext';
+    src: local('BMWTypeNext Light'), local('BMWTypeNext-Light'),
+        url('../fonts/BMWTypeNext-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+//BMWTypeNextTT
+@font-face {
+    font-family: 'BMWTypeNextTT';
+    src: local('BMWTypeNextTT Thin'), local('BMWTypeNextTT-Thin'),
+        url('../fonts/BMWTypeNextTT-Thin.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'BMWTypeNextTT';
+    src: local('BMWTypeNextTT Light'), local('BMWTypeNextTT-Light'),
+        url('../fonts/BMWTypeNextTT-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'BMWTypeNextTT';
+    src: local('BMWTypeNextTT Regular'), local('BMWTypeNextTT-Regular'),
+        url('../fonts/BMWTypeNextTT-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'BMWTypeNextTT';
+    src: local('BMWTypeNextTT Bold'), local('BMWTypeNextTT-Bold'),
+        url('../fonts/BMWTypeNextTT-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}

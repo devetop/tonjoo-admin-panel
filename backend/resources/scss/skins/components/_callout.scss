@@ -1,0 +1,20 @@
+.callout.callout{
+    &-primary{
+        border-left-color: var(--primary-darken);
+    }
+    &-secondary{
+        border-left-color: var(--secondary-darken);
+    }
+    &-warning{
+        border-left-color: var(--warning-darken);
+    }
+    &-success{
+        border-left-color: var(--success-darken);
+    }
+    &-danger{
+        border-left-color: var(--danger-darken);
+    }
+    &-info{
+        border-left-color: var(--info-darken);
+    }
+}

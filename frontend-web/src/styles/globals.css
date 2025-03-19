@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	color-scheme: light;
+}
+
+:root {
+	--foreground-rgb: 0, 0, 0;
+	--background-start-rgb: 255, 255, 255;
+	--background-end-rgb: 255, 255, 255;
+	--primary-rgb: 20 40 80;
+	--secondary-rgb: 0 184 184;
+	--tertiary-rgb: 102 112 133;
+	--text-rgb: 52 64 84;
+	--light-rgb: 249 250 251;
+}
+
+@layer base{
+	a:not(.button):not(.card){
+		@apply transition-colors duration-200 hover:text-secondary;
+	}
+
+	body{
+		@apply text-text leading-6;
+	}
+
+	header.site-header.fixed ~ main.site-main{
+		@apply mt-[60px] lg:mt-[90px];
+	}
+}
+
+@layer components {
+	/* BEGIN:Icon */
+	.icon svg{
+		width: var(--size);
+		height: var(--size);
+	}
+	/* END:Icon */
+
+	/* BEGIN: Menu Navigasi Primary */
+	@import "NavigationMenu.css";
+	/* END: Menu Navigasi Primary */
+
+	/* BEGIN: Swiper */
+	.swiper{
+		--swiper-theme-color: var(rgb(--primary-rgb));
+	}
+	.swiper-quote .swiper-slide{
+		@apply opacity-30 transition-opacity duration-75;
+	}
+	.swiper-quote .swiper-slide.swiper-slide-fully-visible{
+		@apply opacity-100;
+	}
+	/* END: Swiper */
+
+	footer{
+		@apply leading-7;
+	}
+}
+
+.shadow-center {
+	box-shadow: 0 0 20px -12px #999;
+}

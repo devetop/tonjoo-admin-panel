@@ -1,0 +1,25 @@
+meta {
+  name: register
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{base_url}}/api/register
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "email": "{{email}}",
+    "name": "{{name}}",
+    "password": "{{password}}"
+  }
+}
+
+vars:pre-request {
+  email: test@mail.com
+  name: test
+  password: 12341234
+}

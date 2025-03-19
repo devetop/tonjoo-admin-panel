@@ -1,0 +1,10 @@
+/* Phosphor */
+@import "./phosphor-icon/fill/style";
+@import "./phosphor-icon/regular/style";
+@import "./phosphor-icon/bold/style";
+
+/* Font Awesome */
+@import "plugins/fontawesome-free/css/all";
+
+/* Ionicons */
+@import "ionicons-2.0.1/css/ionicons";

@@ -1,0 +1,41 @@
+{
+    "name": "tormjens/eventy",
+    "description": "The WordPress filter/action system in Laravel",
+    "keywords": ["laravel", "wordpress", "action", "events", "event", "filter", "action", "filters", "actions", "hook", "hooks"],
+    "homepage": "https://github.com/tormjens/eventy",
+    "license" : "MIT",
+    "authors": [
+        {
+            "name": "Tor Morten Jensen",
+            "homepage": "https://App\Api.no"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.4",
+        "illuminate/support": ">=5.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": ">=5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\Api\\Eventy\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "EventyTests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "App\Api\\Eventy\\EventServiceProvider",
+                "App\Api\\Eventy\\EventBladeServiceProvider"
+            ],
+            "aliases": {
+                "Eventy": "App\Api\\Eventy\\Facades\\Events"
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+.input-group {
+    .form-control{
+        &:focus{
+            border-color: lighten($primary, 8%);
+
+            ~ .input-group-append{
+                .input-group-text{
+                    border-color: lighten($primary, 8%);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,37 @@
+.input-group {
+    .input-group-prepend{
+        margin-right: -1px;
+        margin-left: 0;
+
+        .input-group-text{
+            border: 1px solid var(--input-border, #ced4da);
+            z-index: 3;
+            background-color: var(--input-bg, #fff);
+        }
+    }
+
+    .form-control{
+        &-sm{
+            ~ .input-group-append{
+                .input-group-text{
+                    padding-top: 0.2rem;
+                    padding-bottom : 0.2rem;
+                    
+                    i, [class*=ph]{
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+
+        ~ .input-group-prepend{
+            margin-left: -1px;
+            margin-right: 0;
+
+
+            .input-group-text{
+                border-left: 0;
+            }
+        }
+    }
+}

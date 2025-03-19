@@ -1,0 +1,23 @@
+blockquote{
+    border-color: var(--primary);
+    &.quote{
+        &-primary{
+            border-color: var(--primary);
+        }
+        &-secondary{
+            border-color: var(--secondary);
+        }
+        &-warning{
+            border-color: var(--warning);
+        }
+        &-success{
+            border-color: var(--success);
+        }
+        &-danger{
+            border-color: var(--danger);
+        }
+        &-info{
+            border-color: var(--info);
+        }
+    }
+}

@@ -1,0 +1,13 @@
+#nprogress {
+    position: relative;
+    z-index: 2147483647;
+    .bar {
+        z-index: 2147483647; /* Nilai z-index yang tinggi */
+    }
+    .peg {
+        z-index: 2147483647;
+    }
+    .spinner {
+        z-index: 2147483647;
+    }
+}

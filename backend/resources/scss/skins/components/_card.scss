@@ -1,0 +1,47 @@
+.card{
+    &-primary{
+        &:not(.card-outline)>.card-header{
+            background-color: var(--primary);
+            color: var(--primary-text, var(--light-text));
+        }
+        &.card-outline {
+            border-color: var(--primary);
+        }
+    }
+    &-info{
+        &:not(.card-outline)>.card-header{
+            background-color: var(--info);
+            color: var(--info-text, var(--light-text));
+        }
+        &.card-outline {
+            border-color: var(--info);
+        }
+    }
+    &-success{
+        &:not(.card-outline)>.card-header{
+            background-color: var(--success);
+            color: var(--success-text, var(--light-text));
+        }
+        &.card-outline {
+            border-color: var(--success);
+        }
+    }
+    &-danger{
+        &:not(.card-outline)>.card-header{
+            background-color: var(--danger);
+            color: var(--danger-text, var(--light-text));
+        }
+        &.card-outline {
+            border-color: var(--danger);
+        }
+    }
+    &-warning{
+        &:not(.card-outline)>.card-header{
+            background-color: var(--warning);
+            color: var(--warning-text, var(--dark-text));
+        }
+        &.card-outline {
+            border-color: var(--warning);
+        }
+    }
+}

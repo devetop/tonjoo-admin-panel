@@ -1,0 +1,78 @@
+.btn-group{
+    .btn{
+        ~.dropdown-menu{
+            .dropdown-item{
+                color: var(--dark-text);
+
+                &:hover{
+                    color: var(--primary-hover);
+                }
+
+                &:active, &.active{
+                    color: darken($the-light-text, 10%);
+                }
+            }
+        }
+
+        &-primary{
+            ~.dropdown-menu{
+                .dropdown-item{
+                    &:active, &.active{
+                        color: var(--primary-text-active, darken($the-light-text, 10%));
+                        background-color: var(--primary-hover);
+                    }
+                }
+            }
+        }
+        &-secondary{
+            ~.dropdown-menu{
+                .dropdown-item{
+                    &:active, &.active{
+                        color: var(--secondary-text-active, darken($the-light-text, 10%));
+                        background-color: var(--secondary-hover);
+                    }
+                }
+            }
+        }
+        &-success{
+            ~.dropdown-menu{
+                .dropdown-item{
+                    &:active, &.active{
+                        color: var(--success-text-active, darken($the-light-text, 10%));
+                        background-color: var(--success-hover);
+                    }
+                }
+            }
+        }
+        &-info{
+            ~.dropdown-menu{
+                .dropdown-item{
+                    &:active, &.active{
+                        color: var(--info-text-active, darken($the-light-text, 10%));
+                        background-color: var(--info-hover);
+                    }
+                }
+            }
+        }
+        &-warning{
+            ~.dropdown-menu{
+                .dropdown-item{
+                    &:active, &.active{
+                        color: var(--warning-text-active, darken($the-light-text, 10%));
+                        background-color: var(--warning-hover);
+                    }
+                }
+            }
+        }
+        &-danger{
+            ~.dropdown-menu{
+                .dropdown-item{
+                    &:active, &.active{
+                        color: var(--danger-text-active, darken($the-light-text, 10%));
+                        background-color: var(--danger-hover);
+                    }
+                }
+            }
+        }
+    }
+}

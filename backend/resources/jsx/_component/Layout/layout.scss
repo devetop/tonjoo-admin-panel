@@ -1,0 +1,35 @@
+.sidebar {
+    ul {
+        li.nav-item {
+            .nav-link {
+                color: var(--secondary);
+            }
+            &.active {
+                .nav-link {
+                    color: var(--light);
+                }
+            }
+            &.menu-open {
+                .nav-item {
+                    .nav-link {
+                        color: var(--secondary);
+                    }
+                    &.active {
+                        .nav-link {
+                            color: var(--light);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.profile-button {
+    ._dropdown {
+        position: absolute;
+        width: 200px;
+        right: 10px;
+        top: 50px;
+    }
+}

@@ -1,0 +1,98 @@
+{
+    "current_page": 1,
+    "data": [
+        {
+            "pegawai": "Alga Kharisma Adiyuda",
+            "tanggal_kontrak": "19 Mei 2020 s/d 19 Mei 2022",
+            "sisa_kontrak": "9 bulan 20 hari",
+            "posisi": "Frontend Developer",
+            "status": "Full Time",
+            "divisi": "Teknikal",
+            "benefit": "Rp 1.800.000"
+        },
+        {
+            "pegawai": "Nugroho Dwis Sugiharto",
+            "tanggal_kontrak": "19 Mei 2020 s/d 19 Mei 2022",
+            "sisa_kontrak": "9 bulan 20 hari",
+            "posisi": "Frontend Developer",
+            "status": "Full Time",
+            "divisi": "Teknikal",
+            "benefit": "Rp 1.800.000"
+        },
+        {
+            "pegawai": "Abdullah Hanif Mufid",
+            "tanggal_kontrak": "19 Mei 2020 s/d 19 Mei 2022",
+            "sisa_kontrak": "9 bulan 20 hari",
+            "posisi": "Content Writer Website",
+            "status": "Full Time",
+            "divisi": "SEO & CW",
+            "benefit": "Rp 1.800.000"
+        },
+        {
+            "pegawai": "Anisa Kautsar Juniardi",
+            "tanggal_kontrak": "19 Mei 2020 s/d 19 Mei 2022",
+            "sisa_kontrak": "9 bulan 20 hari",
+            "posisi": "Content Writer Website",
+            "status": "Full Time",
+            "divisi": "SEO & CW",
+            "benefit": "Rp 1.800.000"
+        },
+        {
+            "pegawai": "Erlina Cahyani",
+            "tanggal_kontrak": "19 Mei 2020 s/d 19 Mei 2022",
+            "sisa_kontrak": "9 bulan 20 hari",
+            "posisi": "System Analyst",
+            "status": "Full Time",
+            "divisi": "Teknikal",
+            "benefit": "Rp 1.800.000"
+        }
+    ]
+    ,
+    "first_page_url": "http:\/\/127.0.0.1:8000\/jsx\/master-data?page=1",
+    "from": 1,
+    "last_page": 5,
+    "last_page_url": "http:\/\/127.0.0.1:8000\/jsx\/master-data?page=5",
+    "links": [
+        {
+            "url": null,
+            "label": "&laquo; Previous",
+            "active": false
+        },
+        {
+            "url": "http:\/\/127.0.0.1:8000\/jsx\/master-data?page=1",
+            "label": "1",
+            "active": true
+        },
+        {
+            "url": "http:\/\/127.0.0.1:8000\/jsx\/master-data?page=2",
+            "label": "2",
+            "active": false
+        },
+        {
+            "url": "http:\/\/127.0.0.1:8000\/jsx\/master-data?page=3",
+            "label": "3",
+            "active": false
+        },
+        {
+            "url": "http:\/\/127.0.0.1:8000\/jsx\/master-data?page=4",
+            "label": "4",
+            "active": false
+        },
+        {
+            "url": "http:\/\/127.0.0.1:8000\/jsx\/master-data?page=5",
+            "label": "5",
+            "active": false
+        },
+        {
+            "url": "http:\/\/127.0.0.1:8000\/jsx\/master-data?page=2",
+            "label": "Next &raquo;",
+            "active": false
+        }
+    ],
+    "next_page_url": "http:\/\/127.0.0.1:8000\/jsx\/master-data?page=2",
+    "path": "http:\/\/127.0.0.1:8000\/jsx\/master-data",
+    "per_page": 5,
+    "prev_page_url": null,
+    "to": 10,
+    "total": 43
+}

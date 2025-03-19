@@ -1,0 +1,25 @@
+.row{
+    &.separator{
+        margin-left: -10px;
+        margin-right: -10px;
+        > [class*=col]{
+            position: relative;
+            padding-left: 10px;
+            padding-right: 10px;
+
+            &:not(:last-child){
+                &:after{
+                    content:'';
+                    width: 1px;
+                    height: calc(100% - 5px);
+                    background-color: var(--separator-color, var(--border-color, #ddd));
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 0;
+                }
+            }
+        }
+    }
+}

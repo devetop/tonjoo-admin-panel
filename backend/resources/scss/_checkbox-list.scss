@@ -1,0 +1,32 @@
+.checkbox-list {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    font-size: 13px;
+    max-height: 250px;
+    overflow-y: auto;
+  
+    li {
+      margin: 5px 0;
+    }
+
+    .checkbox, .radio {
+        position: relative;
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    label{
+        font-weight: normal !important;
+        margin-bottom: 0 !important;
+        cursor: pointer;
+    }
+}
+  
+.sub-checkbox-list {
+    list-style: none;
+    margin: 0;
+    padding-left: 20px;
+}
+  

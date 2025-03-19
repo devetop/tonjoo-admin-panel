@@ -1,0 +1,44 @@
+meta {
+  name: add product
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base_url}}/api/product/mine
+  body: json
+  auth: none
+}
+
+body:multipart-form {
+  title: test
+  slug: test
+  content: <p>test konten</p>
+  status: publish
+  meta[sub_title]: 
+  meta[meta_title]: seo title
+  meta[meta_description]: seo desc
+  meta[page_template]: default
+  term[product_category][0]: 9
+  term[product_tag][0]: 13
+  meta[featured_image]: @file(/home/tonjoo-nazala/Downloads/sha-logo.jpg)
+  ~author_id: 1
+}
+
+script:pre-request {
+  const {faker} = require("@faker-js/faker")
+  
+  req.setBody({
+    title: faker.lorem.sentence(), 
+    content: faker.lorem.sentence(), 
+    status: faker.helpers.arrayElement(['draft', 'publish']), 
+    meta: { 
+      page_template: "default"
+    },
+  })
+}
+
+script:post-response {
+  const productId  = res.body.data.id
+  bru.setEnvVar('productId', productId)
+}

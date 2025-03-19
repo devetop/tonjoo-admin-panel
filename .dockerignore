@@ -1,0 +1,19 @@
+# Laravel
+backend/storage/app/*
+backend/storage/framework/cache/*
+backend/storage/framework/sessions/*
+backend/storage/framework/views/*
+backend/storage/logs/*
+backend/vendor/*
+backend/public/build/*
+backend/public/hot/*
+backend/bootstrap/cache/*
+backend/node_modules/*
+
+# General
+**/node_modules
+**/.next
+package-lock.json
+
+# Redis Data
+docker/redis/data/*

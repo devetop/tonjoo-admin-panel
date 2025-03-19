@@ -1,0 +1,10 @@
+.main-header.navbar{
+    background-color: var(--navbar, #fff);
+    color: var(--navbar-color, var(--dark-text));
+
+    .navbar-nav{
+        .nav-link{
+            color: var(--navbar-color, rgba(0,0,0,.5));
+        }
+    } 
+}

@@ -1,0 +1,11 @@
+meta {
+  name: delete product
+  type: http
+  seq: 9
+}
+
+delete {
+  url: {{base_url}}/api/product/{{productId}}
+  body: multipartForm
+  auth: none
+}

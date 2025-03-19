@@ -1,0 +1,70 @@
+.single-list-box {
+    padding-bottom: 0;
+  
+    .image-preview {
+        width: 100%;
+        border: 0;
+    
+        img {
+            object-position: center top;
+        }
+    }
+  
+    .deleted-box {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        text-align: center;
+        right: 0;
+        top: 0;
+        font-size: 11px;
+        color: #fff;
+        background-color: #777;
+        border-radius: 0 0 0 3px;
+        cursor: pointer;
+        z-index: 99;
+        transform: none;
+    }
+}
+  
+.single-list-box--featured {
+    .image-preview, .single-file-label {
+        height: 150px;
+    }
+}
+  
+.single-file-label {
+    width: 100%;
+    border-radius: 0;
+    display: block;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+  
+.single-list-box .input-wrap.is-uploading {
+    pointer-events: none;
+
+    .single-file-label {
+        border-color: #768798;
+        color: #768798;
+    
+        &:after {
+            content: "UPLOADING..";
+        }
+    }
+
+    .fa {
+        animation: spin 800ms steps(8) infinite;
+
+        &:before {
+            content: "\f110";
+        }
+    }
+
+    .single-file-text {
+        display: none;
+    }
+}

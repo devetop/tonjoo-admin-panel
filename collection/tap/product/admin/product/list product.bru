@@ -1,0 +1,23 @@
+meta {
+  name: list product
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{base_url}}/api/product
+  body: none
+  auth: none
+}
+
+params:query {
+  ~tag: Android,Electron
+  ~search: expedita
+  ~page: 1
+  ~limit: 9
+  ~sortBy: posts.created_at
+  ~orderBy: DESC
+  ~category: Aplikasi Mobile
+  ~status: publish
+  ~author: admin
+}

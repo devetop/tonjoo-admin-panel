@@ -1,0 +1,68 @@
+.alert{
+    &-primary{
+        background-color: var(--primary);
+        border-color: var(--primary-darken);
+        color: var(--primary-text, var(--light-text));
+
+        code, pre{
+            background-color: darken($primary, 15%);
+        }
+    }
+    &-secondary{
+        background-color: var(--secondary);
+        border-color: var(--secondary-darken);
+        color: var(--secondary-text, var(--light-text));
+
+        code, pre{
+            background-color: darken($secondary, 15%);
+        }
+    }
+    &-warning{
+        background-color: var(--warning);
+        border-color: var(--warning-darken);
+        color: var(--warning-text, var(--dark-text));
+
+        code, pre{
+            background-color: darken($warning, 15%);
+        }
+    }
+    &-success{
+        background-color: var(--success);
+        border-color: var(--success-darken);
+        color: var(--success-text, var(--light-text));
+
+        code, pre{
+            background-color: darken($success, 15%);
+        }
+    }
+    &-danger{
+        background-color: var(--danger);
+        border-color: var(--danger-darken);
+        color: var(--danger-text, var(--light-text));
+
+        code, pre{
+            background-color: darken($danger, 15%);
+        }
+    }
+    &-info{
+        background-color: var(--info);
+        border-color: var(--info-darken);
+        color: var(--info-text, var(--light-text));
+
+        code, pre{
+            background-color: darken($info, 15%);
+        }
+    }
+
+    &-dark{
+        code, pre{
+            background-color: darken($dark, 15%);
+        }
+    }
+
+    &-light{
+        code, pre{
+            background-color: darken($the-light-text, 15%);
+        }
+    }
+}

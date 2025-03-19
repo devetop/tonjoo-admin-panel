@@ -1,0 +1,6 @@
+@each $name, $size, $linesize in $fontSize {
+    .h#{$name}, h#{$name}, .font__size-#{$name} {
+        font-size: $size;
+        line-height: $linesize;
+    }
+}

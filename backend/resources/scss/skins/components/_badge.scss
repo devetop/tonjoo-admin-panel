@@ -1,0 +1,26 @@
+.badge{
+    &-primary{
+        background-color: var(--primary) !important;
+        color: var(--primary-text, var(--light-text));
+    }
+    &-secondary{
+        background-color: var(--secondary) !important;
+        color: var(--secondary-text, var(--light-text));
+    }
+    &-warning{
+        background-color: var(--warning) !important;
+        color: var(--warning-text, var(--dark-text));
+    }
+    &-success{
+        background-color: var(--success) !important;
+        color: var(--success-text, var(--light-text));
+    }
+    &-danger{
+        background-color: var(--danger) !important;
+        color: var(--danger-text, var(--light-text));
+    }
+    &-info{
+        background-color: var(--info) !important;
+        color: var(--info-text, var(--light-text));
+    }
+}

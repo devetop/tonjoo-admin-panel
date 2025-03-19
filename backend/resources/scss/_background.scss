@@ -1,0 +1,15 @@
+.bg{
+    &-orange{
+        &, a{
+            color: var(--text-color-orange, var(--light-text)) !important;
+        }            
+    }
+
+    &, &-gradient{
+        code, pre{
+            color: var(--light-text);
+            background-color: rgba(var(--white-rgb),0.22);
+            padding: 2px 3px;
+        }
+    }
+}

@@ -1,0 +1,18 @@
+meta {
+  name: update profile
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{base_url}}/api/user/information
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "Frontend Dashboard User",
+    "email": "fed-user@mail.com"
+  }
+}

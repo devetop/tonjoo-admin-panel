@@ -1,0 +1,83 @@
+@use "sass:math";
+$font-family--first: "Roboto", sans-serif !default;
+$font-family--fellow: "Montserrat", sans-serif;
+// Color Default
+$color-primary-01: rgb(20, 40, 80) !default;
+$color-primary-02: rgb(41, 92, 136) !default;
+$color-primary-03: rgb(0, 184, 184) !default;
+$color-primary-04: rgb(218, 225, 231) !default;
+$color-primary-05: #4271d0;
+
+$color-secondary-01: #00a7ba;
+$color-secondary-02: #017596;
+$color-secondary-03: #01356f;
+
+$color-white: #fff;
+$color-white-smoke: rgb(252, 252, 253) !default;
+
+$color-text: #0f0d1d;
+$color-text-02: #726f84;
+
+// Heading
+$font-size-1: 96px !default;
+$font-size-2: 60px !default;
+$font-size-3: 48px !default;
+$font-size-4: 34px !default;
+$font-size-5: 24px !default;
+$font-size-6: 20px !default;
+
+$font-line-1: 112.5px !default;
+$font-line-2: 70.31px !default;
+$font-line-3: 56.25px !default;
+$font-line-4: 44px !default;
+$font-line-5: 28.13px !default;
+$font-line-6: 23.44px !default;
+
+$fontSize: (
+    "1" $font-size-1 $font-line-1,
+    "2" $font-size-2 $font-line-2,
+    "3" $font-size-3 $font-line-3,
+    "4" $font-size-4 $font-line-4,
+    "5" $font-size-5 $font-line-5,
+    "6" $font-size-6 $font-line-6
+) !default;
+
+$image-ratio: (
+    "1x1": calc(1/1),
+    "3x2": calc(2/3),
+    "4x3": calc(3/4),
+    "16x9": calc(9/16),
+    "21x9": calc(9/21),
+    "2x3": calc(3/2),
+    "3x4": calc(4/3),
+    "9x16": calc(16/9),
+    "9x21": calc(21/9),
+);
+
+// Color Basic
+$font-size: 16px !default;
+$font-size-lg: 18px !default;
+$font-size-sm: 14px !default;
+
+// Weight
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-bold: 600 !default;
+$font-weight-bolder: 800 !default;
+
+// Width
+$extralarge--screen: 1600 !default;
+$large--screen--up: 1200 !default;
+$medium--screen--up: 992 !default;
+$medium--screen: 768 !default;
+$small--screen--up: 576 !default;
+$small--screen: 576 !default;
+
+// Media
+$extralarge-and-up: "only screen and (min-width : #{$extralarge--screen}px)";
+$large-and-up: "only screen and (min-width : #{$large--screen--up}px)";
+$large-and-down: "only screen and (max-width : #{$large--screen--up}px)";
+$medium-and-up: "only screen and (min-width : #{$medium--screen}px)";
+$medium-only: "only screen and (min-width : #{$medium--screen}) and (max--width : #{$medium--screen--up}px)";
+$medium-and-down: "only screen and (max-width : #{$medium--screen}px)";
+$small-and-down: "only screen and (max-width : #{$small--screen}px)";

@@ -1,0 +1,31 @@
+.btn-group{
+    .btn{
+        &:not(.dropdown-toggle){
+            flex-basis: 85%;
+            min-width: 75px;
+        }
+    }
+
+    .dropdown-menu{
+        transform: translate3d(0, 31px, 0px);
+        width: 100%;
+        min-width: fit-content;
+        float: unset;
+        right: 0;
+        left: unset;
+    }
+}
+
+.dt-buttons{
+    &.btn-group{
+        .btn{
+            &:not(.dropdown-toggle){
+                flex-basis: auto;
+            }
+        }
+
+        .dropdown-menu{
+            transform: translate3d(0, 0, 0px);
+        }
+    }
+}

@@ -1,0 +1,21 @@
+.role-wrap{
+    column-count: 4;
+    column-gap: 20px;
+}
+.role-wrap .role-items{
+    break-inside: avoid-column;
+}
+
+@media ( max-width: 991px ) {
+    .role-wrap{
+        column-count: 2;
+        column-gap: 20px;
+    }
+}
+
+@media ( max-width: 991px ) {
+    .role-wrap{
+        column-count: 1;
+        column-gap: 0;
+    }
+}

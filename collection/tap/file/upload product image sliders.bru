@@ -1,0 +1,15 @@
+meta {
+  name: upload product image sliders
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base_url}}/api/file/images/products/sliders
+  body: multipartForm
+  auth: none
+}
+
+body:multipart-form {
+  file: @file(/home/tonjoo-nazala/Downloads/batman_90804.png)
+}

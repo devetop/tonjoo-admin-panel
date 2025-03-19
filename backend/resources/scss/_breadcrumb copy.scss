@@ -1,0 +1,33 @@
+.breadcrumb{
+    .breadcrumb-item{
+        a{
+            color: var(--breadcrumb-item-link-color, var(--primary));
+
+            &:hover{
+                color: var(--breadcrumb-item-link-hover, var(--primary-hover));
+            }
+        }
+        &.active{
+            font-weight: var(--breadcrumb-item-active-weight, 500);
+            color: var(--breadcrumb-item-active-color, #6c757d);
+        }
+    }
+}
+
+nav.main-header{
+    .breadcrumb{
+        .breadcrumb-item{
+            a{
+                color: var(--navbar-breadcrumb-item-link-color, #c2c7d0);
+                &:hover{
+                    color: var(--navbar-breadcrumb-item-link-hover, var(--primary-hover));
+                }
+            }
+            &.active{
+                
+                font-weight: var(--navbar-breadcrumb-item-active-weight, 600);
+                color: var(--navbar-breadcrumb-item-active-color, #FFF);
+            }
+        }
+    }
+}

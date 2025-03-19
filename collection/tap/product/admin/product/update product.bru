@@ -1,0 +1,63 @@
+meta {
+  name: update product
+  type: http
+  seq: 6
+}
+
+put {
+  url: {{base_url}}/api/product/{{productId}}
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "title": "New Title Libero perferendis n",
+      "slug": "ini-slug-test-123",
+      "content": "Quia qui necessitati",
+      "status": "draft",
+      "author_id": "3",
+      "meta": {
+          "sub_title": "Sed est necessitati",
+          "meta_title": "Culpa ut sed sunt p",
+          "meta_description": "In irure est eos odi",
+          "page_template": "default",
+          "featured_image_url": "http://127.0.0.1:8090/uploads/images/products/JIutN20241226105935.jpg",
+          "sliders": [
+              {
+                  "url": "http://127.0.0.1:8090/uploads/images/products/sliders/oFYKD20241226110030.jpg",
+                  "name": "slider 1",
+                  "desc": "deskripso slider 1"
+              }
+          ]
+      },
+      "term": {
+          "product_category": [
+              12,
+              11
+          ],
+          "product_tag": [
+              13,
+              14
+          ]
+      },
+      "etc": {
+          "permalink": "#"
+      }
+  }
+}
+
+body:multipart-form {
+  title: test
+  slug: test
+  content: <p>test konten</p>
+  status: publish
+  meta[sub_title]: 
+  meta[meta_title]: seo title
+  meta[meta_description]: seo desc
+  meta[page_template]: default
+  term[product_category][0]: 9
+  term[product_tag][0]: 13
+  meta[featured_image]: @file(/home/tonjoo-nazala/Downloads/sha-logo.jpg)
+  ~author_id: 1
+}

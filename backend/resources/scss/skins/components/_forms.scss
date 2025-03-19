@@ -1,0 +1,11 @@
+.form-control{
+    // padding: 0.175rem 0.75rem;
+
+    // &:not(textarea){
+    //     height: calc(2.05rem + 2px);
+    // }
+
+    &:focus{
+        border-color: lighten($primary, 8%);
+    }
+}

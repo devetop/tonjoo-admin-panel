@@ -1,0 +1,137 @@
+#banner.banner{
+    position: relative;
+    min-height: calc(100vh - 80px);
+    .banner__wrapper{
+        display: flex;
+        min-height: calc(100vh - 80px);
+        align-items: center;
+        max-width: 520px;
+        .banner__wrapper-heading{
+            margin: 80px 0;
+            .title, .title *{
+                font-weight: bold;
+                font-size: 60px;
+                line-height: 70px;
+                letter-spacing: -0.5px;
+                color: #FCFCFD;
+                margin-bottom: 20px;
+            }
+            .desc, .desc *{
+                font-size: 16px;
+                line-height: 28px;
+                letter-spacing: 0.5px;
+                color: #D0D5DD;
+                margin-bottom: 30px;
+            }
+            .readmore{
+                .btn__readmore-green{
+                    background-color: $color-primary-03;
+                }
+            }
+        }
+    }
+
+    @media #{$medium-and-down}{
+        .banner__wrapper{
+            min-height: 720px;
+            align-items:flex-end;
+            .banner__wrapper-heading{
+                text-align: center;
+                margin-bottom: 80px;
+                .title, .title *{
+                    font-size: 34px;
+                    line-height: 44px;
+                    letter-spacing: 0.25px;
+                }
+            }
+        }
+    }
+}
+#bannerv2.bannerv2{
+    .bannerv2__slider{
+        position: relative;
+        &-items{
+            .item{
+                position: relative;
+                height: calc(100vh - 80px);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                &:after{
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: -1;
+                    background: linear-gradient(180deg, rgba(29, 41, 57, 0) -2.8%, #1D2939 130.08%);
+                }
+                .container{
+                    width: 494px;
+                    text-align: center;
+                }
+                &-title, &-title *{
+                    font-weight: bold;
+                    font-size: 60px;
+                    line-height: 70px;
+                    letter-spacing: -0.5px;
+                    color: $color-white-smoke;
+                    margin-bottom: 20px;
+                }
+                &-desc, &-desc *{
+                    font-size: 16px;
+                    line-height: 28px;
+                    letter-spacing: 0.5px;
+                    color: #D0D5DD;
+                    margin-bottom: 30px;
+                }
+                &-readmore, &-readmore *{
+                    .btn__readmore-green{
+                        background-color: $color-primary-03;
+                    }
+                }
+            }
+        }
+        .swiper-bannerv2-pagination{
+            z-index: 9;
+            position: absolute;
+            text-align: center;
+            margin-bottom: 30px;
+            .swiper-pagination-bullet{
+                background-color: $color-white-smoke;
+            }
+        }
+        .swiper-button-next, .swiper-button-prev{
+            &::after{
+                color: $color-white-smoke;
+                font-size: 26px;
+            }
+        }
+    }
+    @media #{$medium-and-down}{
+        .bannerv2__slider-items{
+            .item{
+                min-height: 720px;
+                display: flex;
+                align-items: flex-end;
+                justify-content: center;
+                padding-bottom: 128px;
+                &-title, &-title *{
+                    font-size: 34px;
+                    line-height: 44px;
+                    letter-spacing: 0.25px;
+                }
+            }
+        }
+        .swiper-button-next, .swiper-button-prev{
+            display: none;
+        }
+        .swiper-button-next, .swiper-button-prev{
+            &::after{
+                color: $color-white-smoke;
+                font-size: 16px;
+            }
+        }
+    }
+}

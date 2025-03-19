@@ -1,0 +1,131 @@
+/** Skin Name: Skin Backend 2
+ *  Theme: Light
+ *  Color Table: https://www.figma.com/file/ssQMVkrti5Gxw5RATcZPnh/Tonjoo-Admin-Panel?type=design&node-id=192%3A10283&mode=dev
+ */
+
+body.skin-backend-2{
+	/* BEGIN: Core Var */
+	$primary: #2F3542;
+	$primary-hover: darken($primary, 5%);
+	$primary-active: #181B21;
+	$primary-darken: darken($primary, 10%);
+	$primary-text: var(--light-text);
+	$secondary: #6c757d;
+	$secondary-hover: darken($secondary, 5%);
+	$secondary-darken: darken($secondary, 10%);
+	$secondary-text: var(--light-text);
+	$success: #27AE60;
+	$success-hover: darken($success, 5%);
+	$success-darken: darken($success, 10%);
+	$success-text: var(--light-text);
+	$info: #45AAF2;
+	$info-hover: darken($info, 5%);
+	$info-darken: darken($info, 10%);
+	$info-text: var(--light-text);
+	$warning: #FFB142;
+	$warning-hover: darken($warning, 5%);
+	$warning-darken: darken($warning, 10%);
+	$warning-text: var(--light-text);
+	$danger: #FF5B5C;
+	$danger-hover: darken($danger, 5%);
+	$danger-darken: darken($danger, 10%);
+	$danger-text: var(--light-text);
+	$dark: #343a40;
+	$the-dark-text: #1f2d3d;
+	$the-light-text: #FFF;
+
+	--primary: #{$primary};
+	--primary-hover: #{$primary-hover};
+	--primary-active: #{$primary-active};
+	--primary-darken: #{$primary-darken};
+	--primary-text: #{$primary-text};
+	--secondary: #{$secondary};
+	--secondary-hover: #{$secondary-hover};
+	--secondary-darken: #{$secondary-darken};
+	--secondary-text: #{$secondary-text};
+	--success: #{$success};
+	--success-hover: #{$success-hover};
+	--success-darken: #{$success-darken};
+	--success-text: #{$success-text};
+	--info: #{$info};
+	--info-hover: #{$info-hover};
+	--info-darken: #{$info-darken};
+	--info-text: #{$info-text};
+	--warning: #{$warning};
+	--warning-hover: #{$warning-hover};
+	--warning-darken: #{$warning-darken};
+	--warning-text: #{$warning-text};
+	--danger: #{$danger};
+	--danger-hover: #{$danger-hover};
+	--danger-darken: #{$danger-darken};
+	--danger-text: #{$danger-text};
+	--dark-text: #{$the-dark-text};
+	--light-text: #{$the-light-text};
+	--white-rgb: 255,255,255;
+	--black-rgb: 0,0,0;
+	/* END: Core Var */
+
+	/* BEGIN: Navbar Var */
+	--navbar: #5E6D89;
+	--navbar-color: var(--light-text);
+	--navbar-breadcrumb-item-active-color: var(--light-text);
+	/* END: Navbar Var */
+
+	/* BEGIN: Sidebar Var */
+	--sidebar: #FFFFFF;
+	--sidebar-menu-color: #343a40;
+	--sidebar-menu-active-bg: var(--danger);
+	--sidebar-menu-active-color: var(--light-text);
+	--sidebar-menu-open-bg: rgba(var(--black-rgb),.1);
+	--sidebar-menu-open-color: $gray-800;
+	/* END: Sidebar Var */
+
+	/* BEGIN: Content Var */
+	--content: #F1F2F6; 
+	/* END: Content Var */
+
+	// BEGIN: General
+	@import "components/general";
+	// END: General
+
+	// BEGIN: Utilities
+	@import "components/background";
+	@import "components/badge.scss";
+	@import "components/text";
+	@import "components/alert";
+	@import "components/callout";
+	@import "components/blockquote";
+	// END: Utilities
+
+	// BEGIN: Content
+	@import "components/content";
+	// END: Content
+
+	// BEGIN: Navbar
+	@import "components/navbar";
+	// END: Navbar
+
+	// BEGIN: Sidebar
+	@import "components/sidebar";
+	// END: Sidebar
+
+	// BEGIN: Bootstrap Components
+	@import "components/nav-pills";
+	@import "components/page-item";
+	@import "components/button";
+	@import "components/button-group";
+	@import "components/input-group";
+	@import "components/forms";
+	// END: Bootstrap Components
+
+	// BEGIN: Plugin
+	@import "components/icheck";
+	@import "components/todo";
+	@import "components/direct-chat";
+	// END: Plugin
+
+	// BEGIN: Card
+	@import "components/card";
+	// END: Card
+
+}

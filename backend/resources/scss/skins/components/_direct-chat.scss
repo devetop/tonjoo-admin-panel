@@ -1,0 +1,57 @@
+.direct-chat{
+    &-primary{
+        .right>.direct-chat-text{
+            background-color: var(--direct-chat-bg, var(--primary));
+            border-color: var(--direct-chat-border, var(--primary));
+            color: var(--direct-chat-color, var(--primary-text, var(--light-text)));
+
+            &::after, &::before {
+                border-left-color: var(--direct-chat-border, var(--primary));
+            }
+        }
+    } 
+    &-success{
+        .right>.direct-chat-text{
+            background-color: var(--direct-chat-bg, var(--success));
+            border-color: var(--direct-chat-border, var(--success));
+            color: var(--direct-chat-color, var(--success-text, var(--light-text)));
+
+            &::after, &::before {
+                border-left-color: var(--direct-chat-border, var(--success));
+            }
+        }
+    } 
+    &-info{
+        .right>.direct-chat-text{
+            background-color: var(--direct-chat-bg, var(--info));
+            border-color: var(--direct-chat-border, var(--info));
+            color: var(--direct-chat-color, var(--info-text, var(--light-text)));
+
+            &::after, &::before {
+                border-left-color: var(--direct-chat-border, var(--info));
+            }
+        }
+    } 
+    &-danger{
+        .right>.direct-chat-text{
+            background-color: var(--direct-chat-bg, var(--danger));
+            border-color: var(--direct-chat-border, var(--danger));
+            color: var(--direct-chat-color, var(--danger-text, var(--light-text)));
+
+            &::after, &::before {
+                border-left-color: var(--direct-chat-border, var(--danger));
+            }
+        }
+    } 
+    &-warning{
+        .right>.direct-chat-text{
+            background-color: var(--direct-chat-bg, var(--warning));
+            border-color: var(--direct-chat-border, var(--warning));
+            color: var(--direct-chat-color, var(--warning-text, var(--dark-text)));
+
+            &::after, &::before {
+                border-left-color: var(--direct-chat-border, var(--warning));
+            }
+        }
+    } 
+}

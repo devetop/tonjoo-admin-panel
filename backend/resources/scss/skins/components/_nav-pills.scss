@@ -1,0 +1,7 @@
+.nav-pills{
+    .nav-link.active,
+    .show>.nav-link{
+        color: var(--nav-pills-item-color, $the-light-text);
+        background-color: var(--nav-pills-item-bg, var(--primary));
+    }
+} //.nav-pills

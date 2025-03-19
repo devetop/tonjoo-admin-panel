@@ -1,0 +1,15 @@
+meta {
+  name: upload private file
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base_url}}/api/file/private/images/products
+  body: multipartForm
+  auth: none
+}
+
+body:multipart-form {
+  file: @file(/home/tonjoo-nazala/Downloads/1705989355585.jpg)
+}

@@ -1,0 +1,22 @@
+headers {
+  Cookie: {{cookies}}
+  X-Requested-With: XMLHttpRequest
+  X-XSRF-TOKEN: {{x_xsrf_token}}
+  Origin: {{origin_url}}
+  Referer: {{referer_url}}
+  Accept: application/json
+}
+
+script:post-response {
+  const cookies  = res.headers.get('set-cookie')?.join('; ');
+  if (cookies) {
+    bru.setEnvVar('cookies', decodeURIComponent(cookies)); 
+  }
+  
+  const setCookieHeader = res.headers.get('set-cookie')?.[0];
+  const xsrfTokenMatch  = setCookieHeader?.match(/XSRF-TOKEN=([^;]+)/);
+  if (xsrfTokenMatch?.[1]) {
+    const xsrfToken = decodeURIComponent(xsrfTokenMatch?.[1]);
+    bru.setEnvVar('x_xsrf_token',xsrfToken); 
+  }
+}

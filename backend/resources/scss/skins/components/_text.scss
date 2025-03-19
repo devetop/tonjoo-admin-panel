@@ -1,0 +1,20 @@
+.text{
+    &-primary{
+        color: var(--primary) !important;
+    }
+    &-secondary{
+        color: var(--secondary) !important;
+    }
+    &-warning{
+        color: var(--warning) !important;
+    }
+    &-success{
+        color: var(--success) !important;
+    }
+    &-danger{
+        color: var(--danger) !important;
+    }
+    &-info{
+        color: var(--info) !important;
+    }
+}

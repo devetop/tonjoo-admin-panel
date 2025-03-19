@@ -1,0 +1,69 @@
+# For Development 
+ARG UBUNTU_VERSION=24.04
+
+FROM ubuntu:${UBUNTU_VERSION} AS node-dev-frontend-web
+LABEL Maintainer="Todi <t@tonjoo.id>"
+LABEL Description="PHP Web App Container"
+ENV EDITOR=nano
+ENV HOME=/home/app
+
+# Setup document root
+WORKDIR /var/www/html
+
+# Install necessary packages and PHP
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends software-properties-common curl && \
+    curl -fsSL https://deb.nodesource.com/setup_22.x | bash - && \
+    apt-get update && \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y \
+    gettext-base \
+    apache2-utils \
+    iproute2 \
+    tzdata \
+    iputils-ping \
+    nano \
+    supervisor \
+    nodejs && \
+    apt-get autoremove -y && \
+    apt-get purge -y --auto-remove && \
+    apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+# Remove existing ubuntu user and create new app user
+RUN if getent passwd ubuntu > /dev/null; then \
+        userdel -r ubuntu; \
+    fi && \
+    if getent group ubuntu > /dev/null; then \
+        groupdel ubuntu; \
+    fi && \
+    groupadd -g 1000 app && \
+    useradd -u 1000 -g app -d /home/app -s /bin/bash -m app 
+
+
+# Supervisor Config
+COPY --chown=app ./docker/app/supervisor-frontend-web /home/app/supervisor
+COPY --chown=app ./docker/app/entrypoint-node.sh /usr/local/bin/entrypoint-node.sh
+
+RUN chown -R app:app /run /home/app /usr/local/bin/entrypoint-node.sh /var/www/html && \
+    chmod +x /usr/local/bin/entrypoint-node.sh
+
+USER app
+
+# Expose ports
+EXPOSE 8080
+
+ENTRYPOINT ["/usr/local/bin/entrypoint-node.sh"]
+
+
+# For Docker Images
+FROM node-dev-frontend-web AS frontend-web-image
+
+# Build Node JS Frontendweb
+# node modules to prevent conflict
+# Open write permission in storage folder
+# Build Vendor and NPM install 
+COPY --chown=app:app --chmod=755 ./frontend-web /var/www/html
+RUN chmod 755 /var/www/html/package-lock.json /var/www/html && \
+    cd /var/www/html/ && \  
+    npm install 
+    # npm run build && \
+    # chmod 555 /var/www/html /var/www/html/public

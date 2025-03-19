@@ -1,0 +1,15 @@
+- pastikan port :80 sedang tidak digunakan
+- `bash init.sh clean`
+  - untuk memastikan semua config docker bersih
+- generate 3 env
+  - `bash wrapper.sh copy_env .env-dev-local-sample .env-dev-local`
+  - `bash wrapper.sh copy_env .env-dev-tonjoo-sample .env-dev-tonjoo`
+  - `bash wrapper.sh copy_env .env-dev-proxy-sample .env-dev-proxy`
+- `bash init.sh setup_htaccess`
+  - untuk generate akses admin_panel (pma, redis_commander, traefik, dll)
+- `bash init.sh setup_fake_https_cert`
+  - untuk generate ssl, karena nantinya web akan akses https
+- `bash wrapper.sh dev-local dev-tonjoo dev-proxy up --build`
+  - untuk menjalankan container dan build container jika container belum dibuat
+- `bash wrapper.sh dev-proxy exec backend php artisan migrate:fresh --seed`
+  - untuk menjalankan migrasi dan seeding database backend laravel

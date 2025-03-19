@@ -1,0 +1,24 @@
+#footer{
+    background-color: $color-primary-01;
+    padding: 38px 0;
+    .footer__content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &-desc{
+            font-size: 14px;
+            line-height: 24px;
+            letter-spacing: 0.5px;
+            text-transform: capitalize;
+            color: $color-white-smoke;
+            font-weight: 700;
+        }
+        @media #{$medium-and-down}{
+            display: block;
+            &-desc{
+                text-align: center;
+                margin-bottom: 12px;
+            }
+        }
+    }
+}

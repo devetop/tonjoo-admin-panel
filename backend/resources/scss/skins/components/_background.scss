@@ -1,0 +1,171 @@
+.bg{
+    &-primary{
+        background-color: var(--primary) !important;
+        color: var(--primary-text, var(--light-text)) !important;
+
+        a{
+            color: var(--primary-text, var(--light-text)) !important;
+        }
+
+        code{
+            background-color: darken($primary, 15%);
+        }
+    }
+    &-secondary{
+        background-color: var(--secondary) !important;
+        color: var(--secondary-text, var(--light-text)) !important;
+
+        a{
+            color: var(--secondary-text, var(--light-text)) !important;
+        }
+
+        code{
+            background-color: darken($secondary, 15%);
+        }
+    }
+    &-warning{
+        background-color: var(--warning) !important;
+        color: var(--warning-text, var(--light-text)) !important;
+
+        a{
+            color: var(--warning-text, var(--light-text)) !important;
+        }
+
+        code{
+            background-color: darken($warning, 15%);
+        }
+    }
+    &-success{
+        background-color: var(--success) !important;
+        color: var(--success-text, var(--light-text)) !important;
+
+        a{
+            color: var(--success-text, var(--light-text)) !important;
+        }
+
+        code{
+            background-color: darken($success, 15%);
+        }
+    }
+    &-danger{
+        background-color: var(--danger) !important;
+        color: var(--danger-text, var(--light-text)) !important;
+
+        a{
+            color: var(--danger-text, var(--light-text)) !important;
+        }
+
+        code{
+            background-color: darken($danger, 15%);
+        }
+    }
+    &-info{
+        background-color: var(--info) !important;
+        color: var(--info-text, var(--light-text)) !important;
+
+        a{
+            color: var(--info-text, var(--light-text)) !important;
+        }
+
+        code{
+            background-color: darken($info, 15%);
+        }
+    }
+
+    &-dark{
+        code{
+            background-color: darken($dark, 15%);
+        }
+    }
+
+    &-light{
+        code{
+            background-color: darken($the-light-text, 15%);
+        }
+    }
+}
+
+.bg-gradient{
+    &-primary{
+        background: var(--primary) linear-gradient(180deg,lighten($primary, 8%),var(--primary)) repeat-x !important;
+        color: var(--primary-text, var(--light-text)) !important;
+        
+        a{
+            color: var(--primary-text, var(--light-text)) !important;
+        }
+
+        code{
+            background-color: darken($primary, 15%);
+        }
+    }
+    &-secondary{
+        background: var(--secondary) linear-gradient(180deg,lighten($secondary, 8%),var(--secondary)) repeat-x !important;
+        color: var(--secondary-text, var(--light-text)) !important;
+        
+        a{
+            color: var(--secondary-text, var(--light-text)) !important;
+        }
+
+        code{
+            background-color: darken($secondary, 15%);
+        }
+    }
+    &-warning{
+        background: var(--warning) linear-gradient(180deg,lighten($warning, 8%),var(--warning)) repeat-x !important;
+        color: var(--warning-text, var(--light-text)) !important;
+        
+        a{
+            color: var(--warning-text, var(--light-text)) !important;
+        }
+
+        code{
+            background-color: darken($warning, 15%);
+        }
+    }
+    &-success{
+        background: var(--success) linear-gradient(180deg,lighten($success, 8%),var(--success)) repeat-x !important;
+        color: var(--success-text, var(--light-text)) !important;
+        
+        a{
+            color: var(--success-text, var(--light-text)) !important;
+        }
+
+        code{
+            background-color: darken($success, 15%);
+        }
+    }
+    &-danger{
+        background: var(--danger) linear-gradient(180deg,lighten($danger, 8%),var(--danger)) repeat-x !important;
+        color: var(--danger-text, var(--light-text)) !important;
+        
+        a{
+            color: var(--danger-text, var(--light-text)) !important;
+        }
+
+        code{
+            background-color: darken($danger, 15%);
+        }
+    }
+    &-info{
+        background: var(--info) linear-gradient(180deg,lighten($info, 8%),var(--info)) repeat-x !important;
+        color: var(--info-text, var(--light-text)) !important;
+        
+        a{
+            color: var(--info-text, var(--light-text)) !important;
+        }
+
+        code{
+            background-color: darken($info, 15%);
+        }
+    }
+    &-dark{
+        code{
+            background-color: darken($dark, 15%);
+        }
+    }
+    &-light{
+        code{
+            background-color: darken($the-light-text, 15%);
+        }
+    }
+}

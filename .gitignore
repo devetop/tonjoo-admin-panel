@@ -1,0 +1,26 @@
+docker/mysql/datadir/*
+docker/app/nginx/conf.d/upstream.conf
+docker/app/nginx/log/*
+docker/app/nginx/tmp/*
+docker/traefik/certs/*
+docker/elasticsearch/*
+docker/typesense-data/*
+*.env-dev-local
+*.env-dev-tonjoo
+*.env-dev-proxy
+*.env-dev-container
+*.env-dev-imgproxy
+*.env
+media/*
+*.log
+*.sql
+.htpasswd
+**/.DS_Store
+
+
+# Redis Data
+docker/redis/data/*
+
+# Private notes
+private-notes
+private-notes/*

@@ -1,0 +1,86 @@
+ services: 
+  frontend-dashboard:
+    image: app-frontend-dashboard-${APP_NAME}-image:${APP_TAG} 
+    container_name: frontend-dashboard-${APP_NAME}-image
+    build:
+      context: ../
+      dockerfile: DockerfileFrontendDashboard
+      target: frontend-dashboard-image
+    environment: !override
+      - ROLE_NODE=true
+    env_file: !override
+      - .env-dev-tonjoo
+    ports: !reset
+    volumes: !override
+      - .env-dev-tonjoo:/var/www/html/.env
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.frontend-dashboard-${APP_NAME}.tls=true"
+      - "traefik.http.routers.frontend-dashboard-${APP_NAME}.tls.certresolver=${CERT_RESOLVER}"
+      - "traefik.http.routers.frontend-dashboard-${APP_NAME}.rule=Host(`${DOMAIN_FRONTEND_DASHBOARD}`)"
+      - "traefik.http.routers.frontend-dashboard-${APP_NAME}.entrypoints=web,websecure"
+      - "traefik.http.routers.frontend-dashboard-${APP_NAME}.service=frontend-dashboard-${APP_NAME}"
+      - "traefik.http.services.frontend-dashboard-${APP_NAME}.loadbalancer.server.port=8090"
+      - "traefik.docker.network=${NETWORK}"
+  backend:
+    image: app-backend-${APP_NAME}-image:${APP_TAG} 
+    container_name: backend-${APP_NAME}-image
+    build:
+      context: ../
+      dockerfile: DockerfileBackend
+      target: backend-image
+    environment:
+      - ROLE_BACKGROUND=true
+      - ROLE_NGINX=true
+      - ROLE_PHP_FPM=true
+    env_file:
+      - .env-dev-tonjoo
+    ports: !reset
+    networks:
+      - internal
+      - external
+    volumes: !override 
+      # Backend
+      - ../media/backend:/var/www/html/storage
+      # Admin Panel
+      - ../admin:/var/www/admin
+      - ./app/nginx/.htpasswd:/etc/nginx/.htpasswd
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.backend-${APP_NAME}.tls=true"
+      - "traefik.http.routers.backend-${APP_NAME}.tls.certresolver=${CERT_RESOLVER}"
+      - "traefik.http.routers.backend-${APP_NAME}.rule=Host(`${DOMAIN_BACKEND}`)"
+      - "traefik.http.routers.backend-${APP_NAME}.entrypoints=web,websecure"
+      - "traefik.http.routers.backend-${APP_NAME}.service=backend-${APP_NAME}"
+      - "traefik.http.services.backend-${APP_NAME}.loadbalancer.server.port=80"
+      - "traefik.http.routers.backend-admin-${APP_NAME}.tls=true"
+      - "traefik.http.routers.backend-admin-${APP_NAME}.tls.certresolver=${CERT_RESOLVER}"
+      - "traefik.http.routers.backend-admin-${APP_NAME}.rule=Host(`${DOMAIN_BACKEND}`)"
+      - "traefik.http.routers.backend-admin-${APP_NAME}.entrypoints=admin"
+      - "traefik.http.routers.backend-admin-${APP_NAME}.service=backend-admin-${APP_NAME}"
+      - "traefik.http.services.backend-admin-${APP_NAME}.loadbalancer.server.port=57710"
+      - "traefik.docker.network=${NETWORK}"
+  frontend-web:
+    image: app-frontend-web-${APP_NAME}-image:${APP_TAG} 
+    container_name: frontend-web-${APP_NAME}-image
+    build:
+      context: ../
+      dockerfile: DockerfileFrontendWeb
+      target: frontend-web-image
+    volumes: !override
+      - .env-dev-tonjoo:/var/www/html/.env
+    environment: !override
+      - ROLE_NODE=true
+    env_file: !override
+      - .env-dev-tonjoo
+    ports: !reset
+    volumes: !reset
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.frontend-web-${APP_NAME}.tls=true"
+      - "traefik.http.routers.frontend-web-${APP_NAME}.tls.certresolver=${CERT_RESOLVER}"
+      - "traefik.http.routers.frontend-web-${APP_NAME}.rule=Host(`${DOMAIN_FRONTEND_WEB}`)"
+      - "traefik.http.routers.frontend-web-${APP_NAME}.entrypoints=web,websecure"
+      - "traefik.http.routers.frontend-web-${APP_NAME}.service=frontend-web-${APP_NAME}"
+      - "traefik.http.services.frontend-web-${APP_NAME}.loadbalancer.server.port=8080"
+      - "traefik.docker.network=${NETWORK}"

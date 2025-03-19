@@ -1,0 +1,78 @@
+.breadcrumb__simple{
+    ul{
+        // padding: 0;
+        margin: 0;
+        li{
+            padding: 0;
+            list-style: none;
+            display: inline;
+            position: relative;
+            margin-right: 32px;
+            a, span{
+                font-size: 14px;
+                line-height: 16px;
+                letter-spacing: 0.25px;
+                text-decoration: none;
+                color: $color-white-smoke;
+                text-transform: uppercase;
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                right: -20px;
+                top: 0;
+                width: 10px;
+                height: 100%;
+                background-image: url("../icons/arrow-left.svg");
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            &:last-child{
+                &::after{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+#breadcrumb.breadcrumb{
+    background-color: $color-white-smoke;
+    padding: 40px 0 10px 0;
+    white-space: nowrap;
+    overflow-x: auto;
+    nav{
+        ol.breadcrumb{
+            display: flex;
+            flex-wrap: nowrap;
+            .breadcrumb-item{
+                padding-left: 0px;
+                display: flex;
+                &:not(:first-child):before{
+                    content: "";
+                    width: 34px;
+                    height: 100%;
+                    background-image: url("../icons/breadcrumbArrow.svg");
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    left: 0px;
+                }
+                &:nth-last-child(1):before{
+                    background-image: url("../icons/breadcrumbArrowActive.svg");
+                }
+                &.active{
+                    color: #344054;
+                }
+            }
+            .breadcrumb-item, a{
+                text-decoration: none;
+                font-size: 14px;
+                line-height: 22px;
+                letter-spacing: 0.25px;
+                color: #D0D5DD;
+            }
+        }
+    }
+    @media #{$medium-and-down}{
+        padding: 30px 0 0px 0;
+    }
+}

@@ -1,0 +1,106 @@
+@use 'sass:math';
+
+%reset-list {
+    >.inner {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        overflow: hidden;
+        img, video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+@each $ratio__name, $ratio__size in $image-ratio {
+    .ratio__#{$ratio__name} {
+        position: relative;
+        &:before {
+            display: block;
+            content: "";
+            width: 100%;
+            padding-top: $ratio__size * 100%;
+
+            @media #{$medium-and-down} {
+                padding-top: calc(3/4) * 100%;
+            }
+        }
+
+        &-responsive {
+            position: relative;
+
+            &:before {
+                display: block;
+                content: "";
+                width: 100%;
+                padding-top: $ratio__size * 100%;
+            }
+
+            @extend %reset-list;
+
+        }
+
+
+        @extend %reset-list;
+    }
+}
+
+.background {
+    &__full{
+        width: 100%;
+        position: absolute;
+        height: 100%;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        @extend %reset-list;
+    }
+    &__left{
+        &-25{
+            width: 25%;
+        }
+        &-50{
+            width: 50%;
+        }
+        &-75{
+            width: 75%;
+        }
+        &-25, &-50, &-75{
+            position: absolute;
+            height: 100%;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            @media #{$medium-and-down} {
+                width: 100%;
+            }
+            @extend %reset-list;
+        }
+    }
+    &__right{
+        &-25{
+            width: 25%;
+        }
+        &-50{
+            width: 50%;
+        }
+        &-75{
+            width: 75%;
+        }
+        &-25, &-50, &-75{
+            position: absolute;
+            height: 100%;
+            z-index: -1;
+            top: 0;
+            right: 0;
+            @media #{$medium-and-down} {
+                width: 100%;
+            }
+            @extend %reset-list;
+        }
+    }
+}

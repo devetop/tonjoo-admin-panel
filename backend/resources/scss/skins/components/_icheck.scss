@@ -1,0 +1,13 @@
+.icheck-primary {
+    >input {
+        &:first-child {
+            &:checked+input[type=hidden]+label,
+            &:checked+label {
+                &::before {
+                    background-color: var(--primary);
+                    border-color: var(--primary);
+                }
+            }
+        }
+    }
+}

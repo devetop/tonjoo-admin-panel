@@ -1,0 +1,45 @@
+meta {
+  name: add product
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{base_url}}/api/product
+  body: json
+  auth: none
+}
+
+body:multipart-form {
+  title: test
+  slug: test
+  content: <p>test konten</p>
+  status: publish
+  meta[sub_title]: 
+  meta[meta_title]: seo title
+  meta[meta_description]: seo desc
+  meta[page_template]: default
+  term[product_category][0]: 9
+  term[product_tag][0]: 13
+  ~meta[featured_image_url]: @file()
+  ~author_id: 1
+}
+
+script:pre-request {
+  const {faker} = require("@faker-js/faker")
+  
+  req.setBody({
+    title: faker.lorem.sentence(), 
+    content: faker.lorem.sentence(), 
+    status: faker.helpers.arrayElement(['draft', 'publish']), 
+    meta: { 
+      page_template: "default"
+    },
+    author_id: faker.number.int({min:1, max: 4})
+  })
+}
+
+script:post-response {
+  const productId  = res.body.data.id
+  bru.setEnvVar('productId', productId)
+}

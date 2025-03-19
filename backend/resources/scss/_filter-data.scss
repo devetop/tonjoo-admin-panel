@@ -1,0 +1,107 @@
+.grid-filter-data {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px -10px 5px;
+
+    .col {
+        flex: 0 0 20%;
+        max-width: 20%;
+        padding: 10px;
+    }
+}
+
+.filter-data-list {
+    background-color: #fff;
+    border: 1px solid #d2d6de;
+    border-radius: 3px;
+
+    &__header {
+        font-weight: 700;
+        padding: 5px 25px;
+        text-align: center;
+        border-bottom: 1px solid #d2d6de;
+        font-size: 13px;
+        position: relative;
+
+        .clear{
+            color: #c7200d;
+            left: 0
+        }
+
+        .paste{
+            color: #0a5179;
+            right: 0
+        }
+
+        .clear, .paste{
+            font-size: 14px;
+            padding: 5px 10px;
+            position: absolute;
+            top: 0;
+            opacity: .8;
+
+            &:hover{
+                opacity: 1
+            }
+        }
+    }
+
+    &__body {
+        text-align: center;
+
+        .empty {
+            height: 80px;
+            line-height: 60px;
+            padding: 10px;
+        }
+
+        .form-control {
+            border-radius: 2px;
+        }
+
+        .input{
+            margin: -1px;
+        }
+
+        .data {
+            display: none;
+            max-height: 164px;
+            overflow-y: auto;
+        }
+        
+        .item {
+            padding: 10px 10px;
+            border-bottom: 1px solid #eee;
+            text-align: left;
+            padding-left: 45px;
+            position: relative;
+
+            >.clear {
+                font-size: 14px;
+                padding: 5px 12px;
+                position: absolute;
+                color: #c7200d;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                opacity: .8;
+                height: 100%;
+                border-right: 1px solid #eee;
+                display: flex;
+                align-items: center;
+
+                :hover {
+                    opacity: 1
+                }                
+            }
+        }
+        
+    }
+    
+}
+
+.filter-box--flex{
+    .form-control {
+        display: inline-block
+    }
+} 
